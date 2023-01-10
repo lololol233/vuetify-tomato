@@ -13,7 +13,7 @@ v-row#list
           th 操作
       tbody
         tr(v-if="items.length === 0")
-          td.text-center(colspan="2") 沒有事項
+          td.text-center(colspan="2") 沒有待辦事項
         tr(v-for="item in items" v-else :key="item.id" ref="editInputs")
           td
             v-text-field(v-if="item.edit" v-model="item.model" autofocus :rules="[rules.required, rules.length]")
