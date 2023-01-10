@@ -1,0 +1,13 @@
+@use 'vuetify' with (
+  $utilities: false,
+  $color-pack: false,
+);
+
+.v-main{
+  background-color: whitesmoke;
+  text-align: center;
+}
+
+.v-toolbar__content{
+  background-color: red;
+}

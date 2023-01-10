@@ -15,6 +15,8 @@ v-app
         keep-alive(include="HomeView")
           //- 動態元件，將元件以 is 傳入
           component(:is="Component")
+    v-footer(color="primary") 20221220 copyright
+
 </template>
 
 <script setup>
