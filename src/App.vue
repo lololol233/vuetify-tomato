@@ -7,6 +7,17 @@ v-app
   //-   v-btn(icon="mdi-format-list-bulleted" variant="text" to="/list")
   //-   v-btn(icon="mdi-cog" variant="text" to="/settings")
   //-   v-btn(:icon="notify ? 'mdi-bell' : 'mdi-bell-off'" variant="text" @click="toggleNotify")
+
+  v-main(id="main")
+    v-container
+      router-view(v-slot="{ Component }")
+        //- 換頁保留元件不被銷毀
+        //- 設定 include 指定要保留的元件
+        keep-alive(include="HomeView")
+          //- 動態元件，將元件以 is 傳入
+          component(:is="Component")
+    v-container(class="tomato")
+      v-div(class="tomato-decoration")
   v-card
     v-layout
       v-navigation-drawer(expand-on-hover="" rail="")
@@ -23,16 +34,6 @@ v-app
           v-divider
           v-btn(:icon="notify ? 'mdi-bell' : 'mdi-bell-off'" variant="text" @click="toggleNotify")
       v-main(style="height: 100vh; display: flex")
-  v-main
-    v-container
-      router-view(v-slot="{ Component }")
-        //- 換頁保留元件不被銷毀
-        //- 設定 include 指定要保留的元件
-        keep-alive(include="HomeView")
-          //- 動態元件，將元件以 is 傳入
-          component(:is="Component")
-    v-footer(color="primary") 20221220 copyright
-
 </template>
 
 <script setup>

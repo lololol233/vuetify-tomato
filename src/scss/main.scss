@@ -3,13 +3,95 @@
   $color-pack: false,
 );
 
-.v-main{
+body{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#main{
+  height: 100vh;
+  overflow: hidden;
   background-color: #474747;
+}
+.v-main{
   text-align: center;
   color: #E8E8E8;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .v-toolbar__content{
   background-color: #F08448;
 }
+
+.v-card{
+  position: fixed;
+}
+
+.tomato{
+  width: 70rem;
+  height: 70rem;
+  border-radius: 50%;
+  background-color: #F08448;
+  position: absolute;
+  left: 15vw;
+  bottom: -50rem;
+  z-index: 1;
+}
+
+.tomato::after{
+  content: "";
+  position: absolute;
+  width: 3rem;
+  height: 6rem;
+  border-radius: 45%;
+  background-color: #E8E8E8; 
+  top: 10rem;
+  left: 25rem;
+  }
+
+  .tomato::before{
+    content: "";
+    position: absolute;
+    width: 3rem;
+    height: 6rem;
+    border-radius: 45%;
+    background-color: #E8E8E8; 
+    top: 10rem;
+    left: 43rem;
+    }
+
+
+
+  .tomato-decoration{
+    width: 8rem;
+    height: 5px;
+    background-color: #E8E8E8;
+    position: absolute;
+    top: 18rem;
+    left: 31rem;
+  }
+
+  .tomato-decoration::before{
+    content: '';
+    position: absolute;
+    background-color: #6C9460;
+    width: 7rem;
+    height: 2rem;
+    top: -19rem;
+    left: 0rem;
+    border-radius: 30%;
+    transform:rotate(30deg);
+  }
+
+  .tomato-decoration::after{
+    content: '';
+    position: absolute;
+    background-color: #6C9460;
+    width: 7rem;
+    height: 2rem;
+    top: -19rem;
+    left: 0rem;
+    border-radius: 30%;
+    transform:rotate(-30deg);
+  }
